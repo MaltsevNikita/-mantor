@@ -96,6 +96,7 @@ html,body
     line-height: 24px
 // ==================================Tab section==================
 .info-section
+  padding-bottom: 115px
   &__title
     font-family: 'CenturyGothic'
     padding-top: 57px
@@ -110,9 +111,10 @@ html,body
   &__description-block
     font-family: CenturyGothic
     border: 3px,solid,#fff
-    padding-top: 47px
-    padding-bottom: 116px
-    // border-left-width: 16px
+    margin-top: 47px
+    margin-bottom: 116px
+    border-left: 16px solid rgba(255, 255, 255, 0.3)
+    padding-left: 35px
 .container
   padding-left: 45px
 .description-block__text--first, .description-block__text--second
@@ -129,24 +131,53 @@ html,body
 .title
   font-size: 48px
   font-weight: 700
-  padding-top: 46px
 
 .body__experience
+  &-title
+    padding-top: 46px
   &-cards
     display: flex
     justify-content: space-evenly
+    padding-bottom: 69px
   &-description
+    border-left: 16px solid rgba(5, 3, 3, 0.3)
+    padding-left: 35px
     font-size: 24px
     font-weight: 400
     max-width: 920px
-    padding-top: 30px
-    padding-bottom: 71px
-
+    margin-top: 30px
+    margin-bottom: 71px
 .experience-card
   max-width: 190px
+  padding-top: 69px
 
 .experience-card__card-img
   padding-bottom: 40px
 
 .experience-card__card-description
   max-width: 200px
+
+.mission
+  background-image: url("/../img/MissionCover-1.jpg")
+  padding-left: 45px
+  padding-bottom: 168px
+.mission__title
+  padding-top: 46px
+  padding-bottom: 30px
+  color: #fff
+  font-size: 48px
+
+.mission__description
+  border-left: 16px solid rgba(255, 255, 255, 0.3)
+  padding-left: 35px
+  padding-bottom: 30px
+  color: #fff
+  max-width: 819px
+  font-size: 24px
+  font-weight: 400
+  &:last-child
+    padding-bottom: 0
+.description-block__text
+  padding-bottom: 30px
+  &:last-child
+    padding-bottom: 0

@@ -124,7 +124,7 @@ function js(){
   )
   .pipe(dest(path.build.js))
   .pipe(browsersync.stream())
-}
+}// функция работы с изображениями=============================================
 function images(){
  return src(path.src.img)
   .pipe(
@@ -145,7 +145,7 @@ function images(){
   .pipe(dest(path.build.img))
   .pipe(browsersync.stream())
 }
-// функция обработки шрифтов
+// функция обработки шрифтов=============================================
 function fonts(){
   return src(path.src.fonts)
     .pipe(ttf2woff())
