@@ -1,0 +1,152 @@
+$blueMentor: #0070ff
+$black: #010007
+
+@font-face
+  font-family: 'Roboto-Regular'
+  src: url('../../fonts/Roboto-Regular.eot')
+  src: local('☺'), url('../../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto-Regular.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'partnerultracondensed'
+  src: local('☺'),url('../fonts/partnerultracondensed.eot'), url('../fonts/partnerultracondensed.woff') format('woff'), url('../fonts/partnerultracondensed.ttf') format('truetype'), url('../fonts/partnerultracondensed.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'CenturyGothic'
+  src: local('0'),url('../fonts/CenturyGothic.ttf') format('truetype'),url('../fonts/CenturyGothic.woff') format('woff'),url('../fonts/CenturyGothic.woff2') format('woff2')
+  font-weight: normal
+  font-style: normal
+
+*,
+*::before,
+*::after
+  margin: 0
+  padding: 0
+  border: 0
+  box-sizing: border-box
+a
+  text-decoration: none
+ul,ol,
+li
+
+  list-style: none
+img
+  vertical-align: top
+h1,h2,h3,h4,h5,h6
+  font-weight: inherit
+  font-size: inherit
+html,body
+  height: 100%
+  line-height: 1
+  font-size: 16px
+  font-family: 'CenturyGothic'
+
+.header
+  background-image: url("/../img/header-rectangle.png")
+  padding-top: 300px
+  margin: 0
+  padding: 0
+  font-family: 'CenturyGothic'
+  &__brandElement
+    z-index: 2
+    margin: 0
+    padding-left: 10%
+  &__logoImg
+    padding-top: 50px
+    padding-left: 40%
+    padding-bottom: 169px
+  &__info-section
+    color: #fff
+    padding-left: 45px
+    background: radial-gradient(53.88% 97% at 50% 48.5%, #2E4151 0%, #010007 100%)
+
+.header__mainMenu
+  position: absolute
+  width: 100%
+  top: 163px
+  left: 0px
+
+.mainMenu-list
+  display: flex
+  justify-content: space-around
+  background-color: #fff
+  color: $black
+  padding: 24px 36px
+.mainMenu-list__item
+  text-transform: uppercase
+  padding-right: 30px
+  font-size: 18px
+  font-weight: bold
+  line-height: 24px
+  letter-spacing: 0em
+  text-align: left
+  &--last
+    padding-right: 0
+    text-transform: uppercase
+    font-weight: 400
+    line-height: 24px
+  &--active
+    color: #6D818E
+    padding-right: 0
+    text-transform: uppercase
+    font-weight: 400
+    line-height: 24px
+// ==================================Tab section==================
+.info-section
+  &__title
+    font-family: 'CenturyGothic'
+    padding-top: 57px
+    font-size: 48px
+    font-style: normal
+    font-weight: 700
+    line-height: 59px
+    letter-spacing: 0em
+    text-align: left
+    max-width: 920px
+
+  &__description-block
+    font-family: CenturyGothic
+    border: 3px,solid,#fff
+    padding-top: 47px
+    padding-bottom: 116px
+    // border-left-width: 16px
+.container
+  padding-left: 45px
+.description-block__text--first, .description-block__text--second
+  max-width: 868px
+  padding-bottom: 10px
+  // font-family: CenturyGothic
+  font-size: 24px
+  font-style: normal
+  font-weight: 400
+  line-height: 29px
+  letter-spacing: 0em
+  text-align: left
+
+.title
+  font-size: 48px
+  font-weight: 700
+  padding-top: 46px
+
+.body__experience
+  &-cards
+    display: flex
+    justify-content: space-evenly
+  &-description
+    font-size: 24px
+    font-weight: 400
+    max-width: 920px
+    padding-top: 30px
+    padding-bottom: 71px
+
+.experience-card
+  max-width: 190px
+
+.experience-card__card-img
+  padding-bottom: 40px
+
+.experience-card__card-description
+  max-width: 200px
