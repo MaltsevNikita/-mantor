@@ -11,7 +11,7 @@ let path={
   },
   src:{
     html: source_folder +  "/*.html",
-    css: source_folder + "/css/style.css",
+    sass: source_folder + "/sass/style.sass",
     js: source_folder + "/js/**/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.ttf",
@@ -71,7 +71,7 @@ function watchFiles(params){
 }
 
 // переменная перечисляющая функции для выполнения сборки===========
-let build = gulp.series(clean,images , gulp.parallel( js ,html, css, fonts  ),browserSync);  
+let build = gulp.series(clean , gulp.parallel( js ,html, css,images, fonts),browserSync);  
 let watch = gulp.parallel(build, watchFiles);
 
 
@@ -85,9 +85,9 @@ function html(){
 }
 // функция раоты со стилями=========================================
 function css(){
-  return src(path.src.css)
+  return src(path.src.sass)
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    
+    .pipe(dest(path.build.css))
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 5 versions"],
