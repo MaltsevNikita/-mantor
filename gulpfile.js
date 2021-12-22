@@ -11,14 +11,14 @@ let path={
   },
   src:{
     html: source_folder +  "/*.html",
-    css: source_folder + "/sass/style.sass",
+    css: source_folder + "/css/style.css",
     js: source_folder + "/js/**/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.ttf",
   },
   watch:{
     html: source_folder +  "/**/*.html",
-    css: source_folder + "/sass/**/*.sass",
+    css: source_folder + "/css/**/*.css",
     js: source_folder + "/js/**/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
   }
@@ -71,8 +71,8 @@ function watchFiles(params){
 }
 
 // переменная перечисляющая функции для выполнения сборки===========
-let build = gulp.series(clean, gulp.parallel( js ,html, css, images, fonts));  
-let watch = gulp.parallel(build,browserSync, watchFiles);
+let build = gulp.series(clean,images , gulp.parallel( js ,html, css, fonts  ),browserSync);  
+let watch = gulp.parallel(build, watchFiles);
 
 
 // функция работы с html=============================================
@@ -124,7 +124,7 @@ function js(){
   )
   .pipe(dest(path.build.js))
   .pipe(browsersync.stream())
-}
+}// функция работы с изображениями=============================================
 function images(){
  return src(path.src.img)
   .pipe(
@@ -145,9 +145,11 @@ function images(){
   .pipe(dest(path.build.img))
   .pipe(browsersync.stream())
 }
-// функция обработки шрифтов
+// функция обработки шрифтов=============================================
 function fonts(){
   return src(path.src.fonts)
+    .pipe(dest(path.build.fonts))
+    .pipe(src(path.src.fonts))
     .pipe(ttf2woff())
     .pipe(dest(path.build.fonts))
     .pipe(src(path.src.fonts))

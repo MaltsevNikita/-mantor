@@ -69,11 +69,11 @@ body {
 }
 
 @font-face {
-  font-family: "CenturyGothic",
+  font-family: "CenturyGothic";
   src: url("../fonts/CenturyGothic.ttf") format("truetype"),
-  src: url("../fonts/CenturyGothic.eot"),
-  src: url("../fonts/CenturyGothic.woff") format("woff"),
-  src: url("../fonts/CenturyGothic.svg") format("svg");
+    url("../fonts/CenturyGothic.eot") format("eot"),
+    url("../fonts/CenturyGothic.woff") format("woff"),
+    url("../fonts/CenturyGothic.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
