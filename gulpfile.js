@@ -19,6 +19,7 @@ let path={
   watch:{
     html: source_folder +  "/**/*.html",
     css: source_folder + "/css/**/*.css",
+    sass: source_folder + "/sass/**/*.sass",
     js: source_folder + "/js/**/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
   }
@@ -71,7 +72,8 @@ function watchFiles(params){
 }
 
 // переменная перечисляющая функции для выполнения сборки===========
-let build = gulp.series(clean , gulp.parallel( js ,html, css,images, fonts),browserSync);  
+//let prebuild = gulp.series( gulp.parallel(images, fonts));  
+let build = gulp.series(clean , gulp.parallel( js ,html, css,images, fonts),browserSync ,watchFiles );  
 let watch = gulp.parallel(build, watchFiles);
 
 
