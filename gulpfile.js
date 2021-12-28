@@ -71,14 +71,24 @@ function watchFiles(params){
   gulp.watch([path.watch.img] , images);
 }
 
-// переменная перечисляющая функции для выполнения сборки===========
-//let prebuild = gulp.series( gulp.parallel(images, fonts));  
-let build = gulp.series(clean , gulp.parallel( js ,html, css,images, fonts),browserSync ,watchFiles );  
+// переменная перечисляющая функции для выполнения всей сборки сразу===========
+let build = gulp.series(clean ,images, fonts, gulp.parallel( js ,html, css), browserSync ,watchFiles );  
 let watch = gulp.parallel(build, watchFiles);
+//===================================отдельные таски==========
+//создаём отдельный таск для clean
+gulp.task('clean',gulp.parallel( clean ))
+//создаём отдельный таск для images
+gulp.task('images', gulp.series( images ));
+//создаём отдельный таск для fonts
+gulp.task('fonts',gulp.parallel( fonts ))
+//==========Просто для запуска браузера без конвертации шрифтов и картинок======
+gulp.task('run', gulp.series(gulp.parallel( js ,html, css), browserSync ,watchFiles ));
+//===========================================================
 
-
+//===============================описываем фунции============================
 // функция работы с html=============================================
 function html(){
+
  return src(path.src.html)
   .pipe(fileinclude()) // объединяет html файлы============
   .pipe(webphtml())
