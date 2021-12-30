@@ -60,27 +60,29 @@ html, body {
   padding-top: 300px;
   margin: 0;
   padding: 0;
-  padding-bottom: 15px;
   font-family: 'CenturyGothic';
 }
 
 .header__brandElement {
-  position: absolute;
-  z-index: 0;
-  margin: 0 auto;
-  left: 25%;
+  z-index: 2;
+  margin: 0;
+  padding-left: 10%;
 }
 
 .header__logoImg {
-  padding-top: 35px;
+  padding-top: 50px;
   padding-left: 40%;
   padding-bottom: 169px;
-  z-index: 3;
+}
+
+.header__info-section {
+  color: #fff;
+  padding-left: 45px;
+  background: radial-gradient(53.88% 97% at 50% 48.5%, #2E4151 0%, #010007 100%);
 }
 
 .header__mainMenu {
   position: absolute;
-  z-index: 3;
   width: 100%;
   top: 163px;
   left: 0px;
@@ -120,10 +122,6 @@ html, body {
 }
 
 .info-section {
-  margin: 0 auto;
-  color: #fff;
-  padding-left: 45px;
-  background: radial-gradient(53.88% 97% at 50% 48.5%, #2E4151 0%, #010007 100%);
   padding-bottom: 115px;
 }
 
@@ -277,44 +275,17 @@ html, body {
 
 .footer__footer-block {
   background-color: #000;
-  padding-top: 48px;
-  padding-bottom: 14px;
+  padding-top: 10px;
+  padding-bottom: 50px;
 }
 
 .footer-list {
   padding-top: 10px;
   display: flex;
-  justify-content: space-evenly;
   padding-left: 35px;
 }
 
-.footer-list-item__title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
-  color: #fff;
-  text-decoration: none;
-  padding-bottom: 14px;
-}
-
 .footer-list__item {
-  max-width: 250px;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-list__item-trademark {
-  font-size: 14px;
-  padding-bottom: 50px;
-}
-
-.footer-list__item-copyright {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.footer-list__item-img {
-  padding-bottom: 10px;
 }
 /*# sourceMappingURL=style.css.map */

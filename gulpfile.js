@@ -72,7 +72,7 @@ function watchFiles(params){
 }
 
 // переменная перечисляющая функции для выполнения всей сборки сразу===========
-let build = gulp.series(clean ,images, fonts, gulp.parallel( js ,html, css), browserSync ,watchFiles );  
+let build = gulp.series(clean ,images, fonts,gulp.parallel( js ,html, css), browserSync ,watchFiles );  
 let watch = gulp.parallel(build, watchFiles);
 //===================================отдельные таски==========
 //создаём отдельный таск для clean
@@ -169,6 +169,7 @@ function fonts(){
     .pipe(dest(path.build.fonts))
     
 }
+
 
 exports.fonts = fonts;
 exports.images = images;
