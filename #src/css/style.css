@@ -119,6 +119,12 @@ html, body {
   line-height: 24px;
 }
 
+.tabs__body {
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
 .info-section {
   margin: 0 auto;
   color: #fff;
@@ -166,6 +172,11 @@ html, body {
 .title {
   font-size: 48px;
   font-weight: 700;
+}
+
+.experience-cards {
+  display: flex;
+  margin-bottom: 69px;
 }
 
 .body__experience-title {
